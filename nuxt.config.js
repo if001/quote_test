@@ -79,7 +79,8 @@ export default {
   serverMiddleware: [
     // { path: '/api', handler: '~/api/index.js' },
     // { path: '/api-ts', handler: '~/api-ts/index.ts' },
-    { path: "/api/echo", handler: "~/server/ws.ts" },
+    { path: "/ws", handler: "~/server/ws.ts" },
+    { path: "/es-ws", handler: "~/server/es-ws.ts" },
   ],
   env: {
     wsHost: process.env.WS_HOST || 'ws://localhost:8999',
