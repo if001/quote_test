@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f1676235-444f-4151-ad02-65242cd9193c/deploy-status)](https://app.netlify.com/sites/mystifying-mclean-b57411/deploys)
+
+
 # nuxt-test
 
 > My kickass Nuxt.js project
