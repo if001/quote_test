@@ -80,9 +80,9 @@
     }
 
     initWebSocket() {
-      this.wsc = new WebSocket("ws://localhost:8999");
+      this.wsc = new WebSocket('ws://' + process.env.WS_HOST || 'localhost:8999');
       this.wsc.addEventListener('open', () => {
-        console.log("client: connect!!!!")
+        console.log('client: connect!!!!')
       });
 
 
@@ -111,11 +111,11 @@
 
     sendPiece() {
       if (this.handedOverPiece) {
-        alert("駒を置く場所を選択してください");
+        alert('駒を置く場所を選択してください');
         return
       }
       if (!this.selectPieceID) {
-        alert("相手に渡す駒を選択してください");
+        alert('相手に渡す駒を選択してください');
         return
       } else if (this.wsc && this.selectPieceID) {
         if (this.leftPiece.length === 16 && !this.isFirstSender) {
@@ -128,14 +128,14 @@
           this.isYourTurn = false;
           removePiece(this.leftPiece, selectPiece.id);
         } else {
-          alert("hand over error!!!!!!")
+          alert('hand over error!!!!!!')
         }
       }
     }
 
     putPiece() {
       if (!this.handedOverPiece) {
-        alert("駒を置く場所を選択してください")
+        alert('駒を置く場所を選択してください')
       } else if(this.wsc) {
         const pos = this.getPutPosition();
         if (isPositionSelected(pos)) {
@@ -146,7 +146,7 @@
 
           this.handedOverPiece = null;
         } else {
-          alert("put error!!!!");
+          alert('put error!!!!');
         }
       }
     }
