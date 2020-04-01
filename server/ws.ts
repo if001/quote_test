@@ -20,7 +20,7 @@ wss.on('connection', (ws) => {
   })
 })
 
-server.listen(process.env.PORT || 8999, () => {
+server.listen(process.env.wsPORT || 8999, () => {
   console.log('Server started :)')
 })
 
