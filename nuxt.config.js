@@ -82,6 +82,6 @@ export default {
     { path: "/api/echo", handler: "~/server/ws.ts" },
   ],
   env: {
-    wsHost: process.env.WS_HOST || 'wss://localhost:8999'
+    wsHost: process.env.WS_HOST || 'ws://localhost:8999'
   }
 }

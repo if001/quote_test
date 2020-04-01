@@ -80,7 +80,7 @@
     }
 
     initWebSocket() {
-      this.wsc = new WebSocket(process.env.wsHost);
+      this.wsc = new WebSocket(process.env.wsHost || 'ws://localhost:8999' );
       this.wsc.addEventListener('open', () => {
         console.log('client: connect!!!!')
       });
