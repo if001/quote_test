@@ -80,5 +80,8 @@ export default {
     // { path: '/api', handler: '~/api/index.js' },
     // { path: '/api-ts', handler: '~/api-ts/index.ts' },
     { path: "/api/echo", handler: "~/server/ws.ts" },
-  ]
+  ],
+  env: {
+    wsHost: process.env.WS_HOST || 'wss://localhost:8999'
+  }
 }
